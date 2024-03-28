@@ -17,6 +17,22 @@ const moveContentToRight = () => {
 };
 moveContentToRight();
 
+// Cards
+const changeOrderCards = () => {
+    const cards = document.querySelectorAll('.col-lg-3');
+    const firstCard = cards[0];
+    const secondCard = cards[1];
+    const thirdCard = cards[2];
+    const fourthCard = cards[3];
+
+    firstCard.querySelector('.btn-primary').classList.add('bg-success');
+
+    secondCard.insertAdjacentElement('beforebegin', fourthCard);
+    secondCard.insertAdjacentElement('beforebegin', thirdCard);
+    firstCard.insertAdjacentElement('beforebegin', fourthCard);
+};
+changeOrderCards();
+
 // Itens
 const addItemsOnList = () => {
     const list = document.querySelector('.list-group');
